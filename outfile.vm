@@ -1,6 +1,19 @@
-push5
-popinput
-push0
-popsum
-push1
-popindex
+pop input
+push 5
+pop sum
+push 0
+pop index
+push 1
+push index
+push input
+push sum
+push equals
+push sum
+push index
+add 
+push index
+push equals
+push index
+push 1
+add 
+print 

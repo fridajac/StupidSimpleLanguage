@@ -1,10 +1,8 @@
 grammar StupidSimple;
 
-file: code+  | EOF;
+file: statement+  | EOF;
 
-code: statement ';' | statement code ';';
-
-statement: declare | assign | print;
+statement: declare | assign | print | loop |expression;
 
 declare: 'this is' ID;
 
@@ -25,13 +23,13 @@ WS: [ \t\r\n]+ -> skip;
 OPEN_PAREN: '(';
 CLOSE_PAREN: ')';
 SUB: 'minus';
-ADD_ASSIGNMENT: 'increase with';
 LE: 'is less than';
 EQUAL: 'equals';
+SEMICOLON: ';';
 
 loop: startloop loopbody endloop;
 cond: unaryExpression LE unaryExpression;
 
-startloop: 'loop while' OPEN_PAREN cond CLOSE_PAREN;
-loopbody: statement | expression;
+startloop: 'loop while ' OPEN_PAREN cond CLOSE_PAREN;
+loopbody: statement+;
 endloop: 'end while';
