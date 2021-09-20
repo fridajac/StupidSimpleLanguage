@@ -15,109 +15,145 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterFile(StupidSimpleParser.FileContext ctx) { }
+    @Override public void enterFile(StupidSimpleParser.FileContext ctx) {
+        out.append("Enter file\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitFile(StupidSimpleParser.FileContext ctx) { }
+    @Override public void exitFile(StupidSimpleParser.FileContext ctx) {
+        out.append("Exit file\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterCode(StupidSimpleParser.CodeContext ctx) { }
+    @Override public void enterCode(StupidSimpleParser.CodeContext ctx) {
+        out.append("Enter code\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitCode(StupidSimpleParser.CodeContext ctx) { }
+    @Override public void exitCode(StupidSimpleParser.CodeContext ctx) {
+        out.append("Exit code\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterStatement(StupidSimpleParser.StatementContext ctx) { }
+    @Override public void enterStatement(StupidSimpleParser.StatementContext ctx) {
+        out.append("Enter statement\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitStatement(StupidSimpleParser.StatementContext ctx) { }
+    @Override public void exitStatement(StupidSimpleParser.StatementContext ctx) {
+        out.append("Exit statement\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterDeclare(StupidSimpleParser.DeclareContext ctx) { }
+    @Override public void enterDeclare(StupidSimpleParser.DeclareContext ctx) {
+        out.append("Enter declaration\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitDeclare(StupidSimpleParser.DeclareContext ctx) { }
+    @Override public void exitDeclare(StupidSimpleParser.DeclareContext ctx) {
+        out.append("Exit declaration\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterPrint(StupidSimpleParser.PrintContext ctx) { }
+    @Override public void enterPrint(StupidSimpleParser.PrintContext ctx) {
+        out.append("print");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitPrint(StupidSimpleParser.PrintContext ctx) { }
+    @Override public void exitPrint(StupidSimpleParser.PrintContext ctx) {
+        out.append("Exit print\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterAssign(StupidSimpleParser.AssignContext ctx) { }
+    @Override public void enterAssign(StupidSimpleParser.AssignContext ctx) {
+        out.append("Enter assign\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitAssign(StupidSimpleParser.AssignContext ctx) { }
+    @Override public void exitAssign(StupidSimpleParser.AssignContext ctx) {
+        out.append("Exit assign\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterExpression(StupidSimpleParser.ExpressionContext ctx) { }
+    @Override public void enterExpression(StupidSimpleParser.ExpressionContext ctx) {
+        out.append("Enter expression\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitExpression(StupidSimpleParser.ExpressionContext ctx) { }
+    @Override public void exitExpression(StupidSimpleParser.ExpressionContext ctx) {
+        out.append("Exit expression\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterAddExpression(StupidSimpleParser.AddExpressionContext ctx) { }
+    @Override public void enterAddExpression(StupidSimpleParser.AddExpressionContext ctx) {
+        out.append("Enter add expression\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitAddExpression(StupidSimpleParser.AddExpressionContext ctx) { }
+    @Override public void exitAddExpression(StupidSimpleParser.AddExpressionContext ctx) {
+        out.append("Exit add expression\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterUnaryExpression(StupidSimpleParser.UnaryExpressionContext ctx) { }
+    @Override public void enterUnaryExpression(StupidSimpleParser.UnaryExpressionContext ctx) {
+        out.append("Enter unary expression\n");
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitUnaryExpression(StupidSimpleParser.UnaryExpressionContext ctx) { }
+    @Override public void exitUnaryExpression(StupidSimpleParser.UnaryExpressionContext ctx) {
+        out.append("Exit unary expression\n");
+    }
     /**
      * {@inheritDoc}
      *
