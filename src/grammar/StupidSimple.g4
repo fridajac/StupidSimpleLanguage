@@ -6,9 +6,9 @@ code: statement ';'+;
 
 statement: declare | print | assign; //ordna som enligt Johan
 
-declare: 'this is ' ID;
+declare: 'this is' ID;
 
-print: 'print ' expression;
+print: 'print' ID;
 
 assign: ID 'has ' expression;
 
@@ -22,18 +22,17 @@ INTEGER: [0-9]+;
 ID: [a-zA-Z_] [a-zA-Z_0-9]+;
 WS: [ \t\r\n];
 
-open_paren: '(';
-close_paren: ')';
-rcurl: 'curlyb';
-add: 'plus';
-sub: 'minus';
-add_assignment: 'increase with';
-le: 'is less than';
-equal: 'equals';
-
+OPEN_PAREN: '(';
+CLOSE_PAREN: ')';
+ADD: 'plus';
+SUB: 'minus';
+ADD_ASSIGNMENT: 'increase with';
+LE: 'is less than';
+EQUAL: 'equals';
 
 loop: startloop loopbody endloop;
+cond: unaryExpression LE unaryExpression;
 
-startloop: 'loop while';
-loopbody: code;
+startloop: 'loop while' OPEN_PAREN cond CLOSE_PAREN;
+loopbody: statement | expression;
 endloop: 'end while';

@@ -1,6 +1,4 @@
 this is input;
-this is sum;
-this is index;
 input has 5;
 sum has 0;
 index has 1;
@@ -9,3 +7,7 @@ loop while (index is less than input)
     index equals index plus 1;
 end while;
 print sum;
+
+
+//push input;
+//
