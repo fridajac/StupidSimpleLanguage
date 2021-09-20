@@ -1,3 +1,6 @@
-push5popinput
-push0popsum
-push1popindex
+push5
+popinput
+push0
+popsum
+push1
+popindex
