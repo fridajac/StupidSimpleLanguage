@@ -1,30 +1,29 @@
 grammar StupidSimple;
 
-file: code;
+file: code+  | EOF;
 
-code: statement ';'+;
+code: statement ';' | statement code ';';
 
-statement: declare | print | assign; //ordna som enligt Johan
+statement: declare | assign | print;
 
 declare: 'this is' ID;
 
-print: 'print' ID;
-
-assign: ID 'has ' expression;
+assign: ID 'has' expression;
 
 expression: unaryExpression | addExpression;
 
-addExpression: unaryExpression 'plus' unaryExpression;
+print: 'print' ID;
 
-unaryExpression: INTEGER | ID;
+addExpression: unaryExpression 'plus' expression;
 
-INTEGER: [0-9]+;
-ID: [a-zA-Z_] [a-zA-Z_0-9]+;
-WS: [ \t\r\n];
+unaryExpression: INT | ID;
+
+INT: ('0'..'9')+;
+ID: ('a'..'z')+;
+WS: [ \t\r\n]+ -> skip;
 
 OPEN_PAREN: '(';
 CLOSE_PAREN: ')';
-ADD: 'plus';
 SUB: 'minus';
 ADD_ASSIGNMENT: 'increase with';
 LE: 'is less than';
