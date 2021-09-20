@@ -1,7 +1,0 @@
-input this is 5;
-sum this is 0;
-index this is 1;
-while (index less than input)
-    sum increase with index;
-    index equals index plus 1;
-    print this index;
