@@ -4,6 +4,8 @@ pop sum
 push 0
 pop index
 push 1
+label startloop
+if-goto exitloop
 push index
 push input
 push sum
@@ -16,4 +18,6 @@ push equals
 push index
 push 1
 add 
+goto startloop
+label exitloop
 print 
