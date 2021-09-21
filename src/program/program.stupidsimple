@@ -3,7 +3,7 @@ input has 5
 sum has 0
 index has 1
 loop while (index is less than input)
-    sum equals sum plus index
-    index equals index plus 1
+    sum has sum plus index
+    index has index plus 1
 end while
 print sum

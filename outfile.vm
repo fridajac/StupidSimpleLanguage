@@ -9,13 +9,11 @@ push index
 push input
 lt
 if-goto exitloop
-push sum
-push equals
+pop sum
 push sum
 push index
 add 
-push index
-push equals
+pop index
 push index
 push 1
 add 
