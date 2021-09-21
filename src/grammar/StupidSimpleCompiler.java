@@ -89,7 +89,7 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener{
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitPrint(StupidSimpleParser.PrintContext ctx) {
-        this.out.append("print " +"\n");
+        this.out.append("print " +ctx.ID() +"\n");
         System.out.println("print" +ctx.ID().getText());
     }
     /**
@@ -136,9 +136,6 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener{
      */
     @Override public void enterLoop(StupidSimpleParser.LoopContext ctx) {
         out.append("label startloop\n");
-        //out.append(ctx.startloop().cond().getText()+"\n"); TODO VM Code for computing Behöver kompileras
-        out.append(" ~(cond)");
-        out.append("if-goto exitloop"+"\n");
     }
     /**
      * {@inheritDoc}
@@ -154,13 +151,17 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener{
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterCond(StupidSimpleParser.CondContext ctx) { }
+    @Override public void enterCond(StupidSimpleParser.CondContext ctx) {
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitCond(StupidSimpleParser.CondContext ctx) { }
+    @Override public void exitCond(StupidSimpleParser.CondContext ctx) {
+        out.append("lt\n");
+        out.append("if-goto exitloop"+"\n");
+    }
     /**
      * {@inheritDoc}
      *

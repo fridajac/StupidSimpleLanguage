@@ -5,9 +5,10 @@ push 0
 pop index
 push 1
 label startloop
-if-goto exitloop
 push index
 push input
+lt
+if-goto exitloop
 push sum
 push equals
 push sum
@@ -20,4 +21,4 @@ push 1
 add 
 goto startloop
 label exitloop
-print 
+print sum
