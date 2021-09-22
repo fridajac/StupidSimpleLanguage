@@ -23,7 +23,7 @@ WS: [ \t\r\n]+ -> skip;
 OPEN_PAREN: '(';
 CLOSE_PAREN: ')';
 LE: 'is less than';
-EQUAL: 'equals'; //TODO SKA TA BORT
+EQUAL: 'equals';
 
 loop: startloop loopbody endloop;
 cond: unaryExpression LE unaryExpression;

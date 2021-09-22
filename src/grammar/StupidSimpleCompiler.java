@@ -161,6 +161,7 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener{
      */
     @Override public void exitCond(StupidSimpleParser.CondContext ctx) {
         out.append("lt\n");
+        out.append("not\n");
         out.append("if-goto exitloop"+"\n");
     }
     /**

@@ -8,6 +8,7 @@ label startloop
 push index
 push input
 lt
+not
 if-goto exitloop
 push sum
 push index
