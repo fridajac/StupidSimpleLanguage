@@ -54,17 +54,18 @@ public class StupidSimpleCompiler extends StupidSimpleBaseListener{
      * <p>The default implementation does nothing.</p>
      */
     @Override public void enterAssign(StupidSimpleParser.AssignContext ctx) {
-        String row = "pop " +ctx.ID().getText();
-
-        this.out.append(row+"\n");
-        System.out.println(row);
     }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitAssign(StupidSimpleParser.AssignContext ctx) { }
+    @Override public void exitAssign(StupidSimpleParser.AssignContext ctx) {
+        String row = "pop " +ctx.ID().getText();
+
+        this.out.append(row+"\n");
+        System.out.println(row);
+    }
     /**
      * {@inheritDoc}
      *

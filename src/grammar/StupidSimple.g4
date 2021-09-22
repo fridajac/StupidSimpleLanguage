@@ -22,10 +22,8 @@ WS: [ \t\r\n]+ -> skip;
 
 OPEN_PAREN: '(';
 CLOSE_PAREN: ')';
-SUB: 'minus';
 LE: 'is less than';
-EQUAL: 'equals';
-SEMICOLON: ';';
+EQUAL: 'equals'; //TODO SKA TA BORT
 
 loop: startloop loopbody endloop;
 cond: unaryExpression LE unaryExpression;
